@@ -4,7 +4,7 @@
     <!-- Hero Section (100vh) -->
     <header class="relative min-h-screen bg-gradient-to-br from-pink-400 to-purple-600 flex flex-col justify-center items-center text-center px-6">
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-        Welcome to Elegant Companions
+        Welcome to Marina
       </h1>
       <p class="text-lg sm:text-xl md:text-2xl text-white mb-8 drop-shadow-md">
         Professional escort services with elegance and style
@@ -70,7 +70,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 text-center py-6">
-      &copy; 2025 Elegant Companions. All rights reserved.
+      &copy; 2025 Marina. All rights reserved.
     </footer>
 
   </div>
