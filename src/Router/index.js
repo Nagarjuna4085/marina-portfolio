@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 // import LoginView from '../views/LoginView.vue'
-import LoginVue from '../Views/LoginVue.vue'
+import LoginVue from '../views/LoginVue.vue'
 
 
 import store from '../store'  // ✅ import store
