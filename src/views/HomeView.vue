@@ -26,7 +26,7 @@
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Gallery</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Gallery Image" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
-        <img src="https://images.unsplash.com/photo-1612831455541-3e7bce7d44df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Gallery Image" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Gallery Image" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
         <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Gallery Image" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
         <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Gallery Image" class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
       </div>

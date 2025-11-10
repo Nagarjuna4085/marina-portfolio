@@ -16,13 +16,15 @@ import UserProfile from '../views/user/UserProfile.vue'
 import UserSettings from '../views/user/UserSettings.vue'
 import UserDetails from '../views/user/UserDetails.vue'
 import GallaryView from '../views/GallaryView.vue'
-
+import Appointment from '../views/Appointment.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/about', name: 'about', component: AboutView },
   { path: '/login', name: 'login', component: LoginVue },
   { path: '/gallery', component: GallaryView },
+    { path: '/appointment', component: Appointment },
+
   // Nested User Routes
   {
     path: '/user',
