@@ -32,7 +32,7 @@
     <section id="gallery" class="py-16 px-6 bg-white">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Gallery</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <img v-for="i in 5" :key="i" 
+        <img v-for="i in 4" :key="i" 
              :src="gallery[i - 1]" 
              alt="Gallery Image" 
              class="w-full h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition transform cursor-pointer">
@@ -101,16 +101,14 @@
 import { ref } from 'vue'
 import bgImage from '../assets/bg.jpg'
 import Appointment from '../views/Appointment.vue'
+import dis1 from "../assets/display/dis1.jpg"
+import dis2 from "../assets/display/dis2.jpg"
+import dis3 from "../assets/display/dis3.jpg"
+import dis4 from "../assets/display/dis4.jpg"
 
 const showDialog = ref(false)
 
-const gallery = [
-  'https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80',
-  'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80'
-]
+const gallery = [dis1,dis2,dis3,dis4]
 
 const services = [
   { title: 'Companionship', desc: 'Enjoy quality time and elegant companionship for events or private meetings.', price: '$150/hour' },
