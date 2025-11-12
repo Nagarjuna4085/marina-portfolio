@@ -1,21 +1,19 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { db } from '../firebase'
-import { collection, getDocs, query, orderBy, where } from 'firebase/firestore'
+import { collection, getDocs, query, orderBy } from 'firebase/firestore'
 
-// State variables
+// State
 const bookings = ref([])
 const loading = ref(false)
 const filterDate = ref('')
 const filterTime = ref('')
 
-// Fetch all bookings
+// Fetch all bookings ordered by dateTime descending
 const fetchBookings = async () => {
   loading.value = true
   try {
-    let q = collection(db, 'appointments')
-
-    // Fetch all documents
+    const q = query(collection(db, 'appointments'), orderBy('dateTime', 'desc'))
     const snapshot = await getDocs(q)
     bookings.value = snapshot.docs.map(doc => ({
       id: doc.id,
@@ -31,11 +29,11 @@ const fetchBookings = async () => {
 // Filtered bookings based on date & time
 const filteredBookings = computed(() => {
   return bookings.value.filter(b => {
-    const bookingDate = b.dateTime.split('T')[0] // yyyy-mm-dd
-    const bookingTime = b.dateTime.split('T')[1]?.substring(0,5) // hh:mm
+    const [bookingDate, bookingTime] = b.dateTime.split('T')
+    const bookingTimeShort = bookingTime?.substring(0,5)
 
     const dateMatch = filterDate.value ? bookingDate === filterDate.value : true
-    const timeMatch = filterTime.value ? bookingTime === filterTime.value : true
+    const timeMatch = filterTime.value ? bookingTimeShort === filterTime.value : true
 
     return dateMatch && timeMatch
   })
@@ -52,12 +50,20 @@ onMounted(fetchBookings)
     <div class="flex flex-col md:flex-row gap-4 mb-6 justify-center items-center">
       <div>
         <label class="block font-semibold mb-1 text-gray-700">Filter by Date</label>
-        <input v-model="filterDate" type="date" class="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
+        <input 
+          v-model="filterDate" 
+          type="date" 
+          class="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" 
+        />
       </div>
 
       <div>
         <label class="block font-semibold mb-1 text-gray-700">Filter by Time</label>
-        <input v-model="filterTime" type="time" class="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
+        <input 
+          v-model="filterTime" 
+          type="time" 
+          class="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" 
+        />
       </div>
     </div>
 
@@ -65,8 +71,8 @@ onMounted(fetchBookings)
     <p v-if="loading" class="text-center text-purple-600 font-semibold">Loading bookings...</p>
 
     <!-- Bookings table -->
-    <div v-else class="overflow-x-auto">
-      <table class="min-w-full bg-white shadow rounded-lg">
+    <div v-else class="overflow-x-auto shadow rounded-lg">
+      <table class="min-w-full bg-white rounded-lg">
         <thead class="bg-purple-600 text-white">
           <tr>
             <th class="py-3 px-4 text-left">Name</th>
@@ -77,7 +83,11 @@ onMounted(fetchBookings)
           </tr>
         </thead>
         <tbody>
-          <tr v-for="booking in filteredBookings" :key="booking.id" class="border-b hover:bg-gray-50 transition">
+          <tr 
+            v-for="booking in filteredBookings" 
+            :key="booking.id" 
+            class="border-b hover:bg-gray-50 transition"
+          >
             <td class="py-2 px-4">{{ booking.name }}</td>
             <td class="py-2 px-4">{{ booking.phone }}</td>
             <td class="py-2 px-4">{{ booking.email }}</td>
