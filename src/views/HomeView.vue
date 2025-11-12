@@ -2,24 +2,31 @@
   <div class="font-sans text-gray-800">
 
     <!-- Hero Section (100vh) -->
-    <header class="relative min-h-screen bg-gradient-to-br from-pink-400 to-purple-600 flex flex-col justify-center items-center text-center px-6">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-        Welcome to Marina
-      </h1>
-      <p class="text-lg sm:text-xl md:text-2xl text-white mb-8 drop-shadow-md">
-        Professional escort services with elegance and style
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#services" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
-          View Services
-        </a>
-        <a href="#appointment" class="bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-purple-800 transition transform hover:-translate-y-1">
-          Book Appointment
-        </a>
-      </div>
-      <!-- Optional subtle overlay for hero image feel -->
-      <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-600 opacity-60"></div>
-    </header>
+ <header 
+  class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat"
+  :style="{ backgroundImage: `url(${bgImage})` }"
+>
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-600 opacity-60"></div>
+
+  <!-- Hero content -->
+  <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg relative z-10">
+    Welcome to Marina
+  </h1>
+  <p class="text-lg sm:text-xl md:text-2xl text-white mb-8 drop-shadow-md relative z-10">
+    Professional escort services with elegance and style
+  </p>
+  <div class="flex flex-wrap justify-center gap-4 relative z-10">
+    <a href="#services" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
+      View Services
+    </a>
+    <a href="/appointment" class="bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-purple-800 transition transform hover:-translate-y-1">
+      Book Appointment
+    </a>
+  </div>
+</header>
+
+
 
     <!-- Gallery Preview -->
     <section id="gallery" class="py-16 px-6 bg-white">
@@ -77,9 +84,13 @@
 </template>
 
 <script>
+import bgImage from '../assets/bg.jpg'
+
 export default {
   setup() {
-    return {}
+    return {
+      bgImage
+    }
   },
 }
 </script>
