@@ -17,11 +17,12 @@ import UserSettings from '../views/user/UserSettings.vue'
 import UserDetails from '../views/user/UserDetails.vue'
 import GallaryView from '../views/GallaryView.vue'
 import Appointment from '../views/Appointment.vue'
-
+import BookingList from '../views/BookingList.vue'
 const routes = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/about', name: 'about', component: AboutView },
   { path: '/login', name: 'login', component: LoginVue },
+  { path: '/bookings', name: 'login', component: BookingList },
   { path: '/gallery', component: GallaryView },
     { path: '/appointment', component: Appointment },
 
