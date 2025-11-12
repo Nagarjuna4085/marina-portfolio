@@ -2,3 +2,32 @@
 body {
   min-height: 100vh;
 }
+
+/* ===== Custom Global Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px; /* thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* light gray track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #9333ea); /* purple gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9333ea, #7e22ce); /* darker on hover */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #f1f1f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}

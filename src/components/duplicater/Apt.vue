@@ -104,8 +104,8 @@ const bookAppointment = async () => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center">
-    <div class="w-full max-w-md bg-white p-8">
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
       <h2 class="text-2xl font-bold text-center mb-6 text-purple-700">Book Appointment</h2>
       <form @submit.prevent="bookAppointment" class="space-y-4">
 
