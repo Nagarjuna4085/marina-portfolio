@@ -44,18 +44,35 @@
 
 <script>
 import { ref } from "vue";
+import g12 from "../assets/FullGallary/IMG-20251112-WA0012.jpg"
+import g14 from "../assets/FullGallary/IMG-20251112-WA0014.jpg"
+import g15 from "../assets/FullGallary/IMG-20251112-WA0015.jpg"
+import g17 from "../assets/FullGallary/IMG-20251112-WA0017.jpg"
+import g18 from "../assets/FullGallary/IMG-20251112-WA0018.jpg"
+import g19 from "../assets/FullGallary/IMG-20251112-WA0019.jpg"
+import g22 from "../assets/FullGallary/IMG-20251112-WA0022.jpg"
+import g23 from "../assets/FullGallary/IMG-20251112-WA0023.jpg"
+import g26 from "../assets/FullGallary/IMG-20251112-WA0026.jpg"
+import g27 from "../assets/FullGallary/IMG-20251112-WA0027.jpg"
+import g29 from "../assets/FullGallary/IMG-20251112-WA0029.jpg"
+import g30 from "../assets/FullGallary/IMG-20251112-WA0030.jpg"
 
 export default {
   setup() {
     const gallery = ref([
-      { url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 1" },
-      { url: "https://images.unsplash.com/photo-1612831455541-3e7bce7d44df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 2" },
-      { url: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 3" },
-      { url: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 4" },
-      { url: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 5" },
-      { url: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 6" },
-      { url: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 7" },
-      { url: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", title: "Image 8" },
+      { url: g12, title: "Image 1" },
+      { url: g14, title: "Image 14" },
+      { url: g15, title: "Image 15" },
+      { url: g17, title: "Image 17" },
+      { url: g18, title: "Image 18" },
+      { url: g19, title: "Image 19" },
+      { url: g22, title: "Image 22" },
+      { url: g23, title: "Image 23" },
+      { url: g26, title: "Image 26" },
+      { url: g27, title: "Image 27" },
+      { url: g29, title: "Image 29" },
+      { url: g30, title: "Image 30" },
+  
     ]);
 
     const showLightbox = ref(false);
